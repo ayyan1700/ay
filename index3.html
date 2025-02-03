@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Word Occurrence Counter</title>
+</head>
+
+<body>
+    <a href="index3.html">go to next page</a>
+    <h1>Count Occurrences of Words in a Sentence</h1>
+
+    <button onclick="countWordOccurrences()">Count Words</button>
+
+    <p id="result"></p>
+
+    <script>
+        function countWordOccurrences() {
+            // The given string
+            let sentence = "the quick brown fox jumps over the lazy dog";
+
+            // Split the string into words (using space as delimiter)
+            let words = sentence.split(" ");
+
+            // Create an object to store the count of each word
+            let wordCount = {};
+
+            // Loop through the words and count their occurrences
+            words.forEach(function (word) {
+                // Convert the word to lowercase to make the count case-insensitive
+                word = word.toLowerCase();
+                // If the word is already in the object, increment its count
+                if (wordCount[word]) {
+                    wordCount[word]++;
+                } else {
+                    // Otherwise, set the count to 1
+                    wordCount[word] = 1;
+                }
+            });
+
+            // Display the result
+            let resultText = "";
+            for (let word in wordCount) {
+                resultText += word + ": " + wordCount[word] + "<br>";
+            }
+
+            document.getElementById('result').innerHTML = resultText;
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Replace Word in String</title>
+</head>
+
+<body>
+    <h1>Replace "date" with "&" in the Message</h1>
+
+    <button onclick="replaceWord()">Replace 'date' with '&'</button>
+
+    <p id="result"></p>
+
+    <script>
+
+        function replaceWord() {
+            // Given message string
+            let message = "ali and sami are best friends then play cricket and football together";
+
+            // Replace all occurrences of "date" with "&" (although there's no "date" in this message, just an example)
+            let updatedMessage = message.replace(/date/g, "&");
+
+            // Display the result
+            document.getElementById('result').innerText = "Updated Message: " + updatedMessage;
+        }
+    </script>
+</body>
+
+</html>

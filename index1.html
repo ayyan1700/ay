@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Find Index of 'n' in "Pakistani"</title>
+</head>
+
+<body>
+    <a href="index2.html">go to next page</a>
+    <h1>Find the Index of 'n' in "Pakistani"</h1>
+
+    <!-- Button to trigger the function -->
+    <button onclick="findIndex()">Find Index</button>
+
+    <!-- Area to display the result -->
+    <p id="result"></p>
+
+    <script>
+        function findIndex() {
+            // Word to search in
+            let word = "Pakistani";
+
+            // Find the index of 'n' in the word
+            let index = word.indexOf('n');
+
+            // Display the result on the webpage
+            if (index !== -1) {
+                document.getElementById('result').innerText = "The index of 'n' in 'Pakistani' is: " + index;
+            } else {
+                document.getElementById('result').innerText = "'n' is not found in 'Pakistani'.";
+            }
+        }
+    </script>
+</body>
+
+</html>

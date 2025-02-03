@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Favorite Mobile Model Length</title>
+</head>
+
+<body>
+    <a href="index3.html">go to next page</a>
+    <h1>Find the Length of Your Favorite Mobile Model</h1>
+
+    <!-- Input field for user to type the favorite mobile model -->
+    <label for="mobileModel">Enter your favorite mobile model: </label>
+    <input type="text" id="mobileModel">
+
+    <!-- Button to trigger the calculation -->
+    <button onclick="displayLength()">Submit</button>
+
+    <!-- Area to display the result -->
+    <p id="result"></p>
+
+    <script>
+        function displayLength() {
+            // Get the user input from the input field
+            let mobileModel = document.getElementById('mobileModel').value;
+
+            // Find the length of the input
+            let length = mobileModel.length;
+
+            // Display the length on the page
+            document.getElementById('result').innerText = "The length of your favorite mobile model is: " + length + " characters.";
+        }
+    </script>
+</body>
+
+</html>
